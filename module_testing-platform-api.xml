@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="module_testing-platform-api" default="compile.module.testing-platform-api">
+  <dirname property="module.testing-platform-api.basedir" file="${ant.file.module_testing-platform-api}"/>
+  
+  <property name="module.jdk.home.testing-platform-api" value="${project.jdk.home}"/>
+  <property name="module.jdk.bin.testing-platform-api" value="${project.jdk.bin}"/>
+  <property name="module.jdk.classpath.testing-platform-api" value="${project.jdk.classpath}"/>
+  
+  <property name="compiler.args.testing-platform-api" value="-encoding UTF-8 -source 8 -target 1.8 ${compiler.args}"/>
+  
+  <property name="testing-platform-api.output.dir" value="${module.testing-platform-api.basedir}/target/classes"/>
+  <property name="testing-platform-api.testoutput.dir" value="${module.testing-platform-api.basedir}/target/test-classes"/>
+  
+  <path id="testing-platform-api.module.bootclasspath">
+    <!-- Paths to be included in compilation bootclasspath -->
+  </path>
+  
+  <path id="testing-platform-api.module.production.classpath">
+    <path refid="${module.jdk.classpath.testing-platform-api}"/>
+  </path>
+  
+  <path id="testing-platform-api.runtime.production.module.classpath">
+    <pathelement location="${testing-platform-api.output.dir}"/>
+  </path>
+  
+  <path id="testing-platform-api.module.classpath">
+    <path refid="${module.jdk.classpath.testing-platform-api}"/>
+    <pathelement location="${testing-platform-api.output.dir}"/>
+  </path>
+  
+  <path id="testing-platform-api.runtime.module.classpath">
+    <pathelement location="${testing-platform-api.testoutput.dir}"/>
+    <pathelement location="${testing-platform-api.output.dir}"/>
+  </path>
+  
+  
+  <patternset id="excluded.from.module.testing-platform-api">
+    <patternset refid="ignored.files"/>
+  </patternset>
+  
+  <patternset id="excluded.from.compilation.testing-platform-api">
+    <patternset refid="excluded.from.module.testing-platform-api"/>
+  </patternset>
+  
+  
+  <target name="compile.module.testing-platform-api" depends="compile.module.testing-platform-api.production,compile.module.testing-platform-api.tests" description="Compile module testing-platform-api"/>
+  
+  <target name="compile.module.testing-platform-api.production" depends="register.custom.compilers" description="Compile module testing-platform-api; production classes"/>
+  
+  <target name="compile.module.testing-platform-api.tests" depends="register.custom.compilers,compile.module.testing-platform-api.production" description="compile module testing-platform-api; test classes" unless="skip.tests"/>
+  
+  <target name="clean.module.testing-platform-api" description="cleanup module">
+    <delete dir="${testing-platform-api.output.dir}"/>
+    <delete dir="${testing-platform-api.testoutput.dir}"/>
+  </target>
+</project>

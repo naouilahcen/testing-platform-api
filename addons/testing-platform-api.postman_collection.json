@@ -1,0 +1,593 @@
+{
+	"info": {
+		"_postman_id": "99736da0-fc65-40b0-a0c1-0640eed81aeb",
+		"name": "platform-api",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"_postman_id": "067a0bb7-2e3b-49b3-ba34-504c1cf986fb",
+			"name": "administrator",
+			"item": [
+				{
+					"_postman_id": "e7bedd8a-05ed-4a27-a886-36c7f63d386e",
+					"name": "login",
+					"item": [
+						{
+							"_postman_id": "24402b06-211d-43f1-b5b2-acfe8f9171eb",
+							"name": "admin-auth",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\"username\":\"root\", \"password\":\"admin\"}"
+								},
+								"url": {
+									"raw": "http://localhost:8181/platform-api/auth",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8181",
+									"path": [
+										"platform-api",
+										"auth"
+									]
+								}
+							},
+							"response": []
+						}
+					],
+					"_postman_isSubFolder": true
+				},
+				{
+					"_postman_id": "2c5c1167-94ae-4b1c-afd4-ec75ee75e198",
+					"name": "profiles",
+					"item": [
+						{
+							"_postman_id": "d9b79081-80ab-4b46-900f-b1f4259bbf1a",
+							"name": "profiles",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJjcmVhdGVkIjoxNTM2NDgxOTYxNjgwLCJhdXR0eXBlIjoiU0lNUExFIiwibmFtZSI6InJvb3QgIiwiYWRtaW4iOnRydWUsImlkIjoxLCJleHAiOjYyMDE2NDgxOTYxLCJlbWFpbCI6InJvb3RAaXRsZWFkZXIubWEiLCJ1c2VybmFtZSI6InJvb3QifQ.Hf1d5POOwIOq4_D-Rbd5Jv1U-XgkM0Mgjz5GqDhTy8UYC093EL7xt-BRF6P3cTeExAJbMF91AT2EHYsjS8h04Q"
+									}
+								],
+								"body": {},
+								"url": {
+									"raw": "http://localhost:8181/platform-api/profiles",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8181",
+									"path": [
+										"platform-api",
+										"profiles"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"_postman_id": "612f1c82-38fe-454a-907f-4d0918e21831",
+							"name": "authorities",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJjcmVhdGVkIjoxNTM2NDgxOTYxNjgwLCJhdXR0eXBlIjoiU0lNUExFIiwibmFtZSI6InJvb3QgIiwiYWRtaW4iOnRydWUsImlkIjoxLCJleHAiOjYyMDE2NDgxOTYxLCJlbWFpbCI6InJvb3RAaXRsZWFkZXIubWEiLCJ1c2VybmFtZSI6InJvb3QifQ.Hf1d5POOwIOq4_D-Rbd5Jv1U-XgkM0Mgjz5GqDhTy8UYC093EL7xt-BRF6P3cTeExAJbMF91AT2EHYsjS8h04Q"
+									}
+								],
+								"body": {},
+								"url": {
+									"raw": "http://localhost:8181/platform-api/authorities",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8181",
+									"path": [
+										"platform-api",
+										"authorities"
+									]
+								}
+							},
+							"response": []
+						}
+					],
+					"_postman_isSubFolder": true
+				},
+				{
+					"_postman_id": "28aaee7e-0c48-4697-81c5-2bd8e2ab43bd",
+					"name": "users",
+					"item": [
+						{
+							"_postman_id": "adf6373c-f086-4de2-9a08-e6c3729c171b",
+							"name": "get",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJjcmVhdGVkIjoxNTM2NDgxOTYxNjgwLCJhdXR0eXBlIjoiU0lNUExFIiwibmFtZSI6InJvb3QgIiwiYWRtaW4iOnRydWUsImlkIjoxLCJleHAiOjYyMDE2NDgxOTYxLCJlbWFpbCI6InJvb3RAaXRsZWFkZXIubWEiLCJ1c2VybmFtZSI6InJvb3QifQ.Hf1d5POOwIOq4_D-Rbd5Jv1U-XgkM0Mgjz5GqDhTy8UYC093EL7xt-BRF6P3cTeExAJbMF91AT2EHYsjS8h04Q"
+									}
+								],
+								"body": {},
+								"url": {
+										"raw": "http://localhost:8181/platform-api/users/1",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8181",
+									"path": [
+										"platform-api",
+										"users",
+										"1"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"_postman_id": "9c702cd9-203f-4570-a6f9-ebd944c17c4d",
+							"name": "usres",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJjcmVhdGVkIjoxNTM2NDgxOTYxNjgwLCJhdXR0eXBlIjoiU0lNUExFIiwibmFtZSI6InJvb3QgIiwiYWRtaW4iOnRydWUsImlkIjoxLCJleHAiOjYyMDE2NDgxOTYxLCJlbWFpbCI6InJvb3RAaXRsZWFkZXIubWEiLCJ1c2VybmFtZSI6InJvb3QifQ.Hf1d5POOwIOq4_D-Rbd5Jv1U-XgkM0Mgjz5GqDhTy8UYC093EL7xt-BRF6P3cTeExAJbMF91AT2EHYsjS8h04Q"
+									}
+								],
+								"body": {},
+								"url": {
+									"raw": "http://localhost:8181/platform-api/users?page=0&size=5",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8181",
+									"path": [
+										"platform-api",
+										"users"
+									],
+									"query": [
+										{
+											"key": "page",
+											"value": "0"
+										},
+										{
+											"key": "size",
+											"value": "5"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"_postman_id": "30941ce8-9ece-4798-84d9-df05fed2d385",
+							"name": "create",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJjcmVhdGVkIjoxNTM2NDgxOTYxNjgwLCJhdXR0eXBlIjoiU0lNUExFIiwibmFtZSI6InJvb3QgIiwiYWRtaW4iOnRydWUsImlkIjoxLCJleHAiOjYyMDE2NDgxOTYxLCJlbWFpbCI6InJvb3RAaXRsZWFkZXIubWEiLCJ1c2VybmFtZSI6InJvb3QifQ.Hf1d5POOwIOq4_D-Rbd5Jv1U-XgkM0Mgjz5GqDhTy8UYC093EL7xt-BRF6P3cTeExAJbMF91AT2EHYsjS8h04Q"
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n\t\"username\":\"hicham\",\n\t\"password\":\"123456\",\n\t\"firstname\":\"test\",\n\t\"lastname\":\"test\",\n\t\"email\":\"new_user@mail.com\",\n\t\"enabled\": true,\n\t\"phone\": \"04534234234\",\n\t\"address\":\"test 123456 address\",\n\t\"avatar\":null,\n\t\"profileId\":\"2\"\n}"
+								},
+								"url": {
+									"raw": "http://localhost:8181/platform-api/users",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8181",
+									"path": [
+										"platform-api",
+										"users"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"_postman_id": "7deea18d-7c6b-4556-b791-3c3e7cbcd48f",
+							"name": "edit",
+							"request": {
+								"method": "PUT",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJjcmVhdGVkIjoxNTM2NDgxOTYxNjgwLCJhdXR0eXBlIjoiU0lNUExFIiwibmFtZSI6InJvb3QgIiwiYWRtaW4iOnRydWUsImlkIjoxLCJleHAiOjYyMDE2NDgxOTYxLCJlbWFpbCI6InJvb3RAaXRsZWFkZXIubWEiLCJ1c2VybmFtZSI6InJvb3QifQ.Hf1d5POOwIOq4_D-Rbd5Jv1U-XgkM0Mgjz5GqDhTy8UYC093EL7xt-BRF6P3cTeExAJbMF91AT2EHYsjS8h04Q"
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n\t\"id\":3,\n\t\"username\":\"younes\",\n\t\"password\":\"123456\",\n\t\"firstname\":\"test\",\n\t\"lastname\":\"test\",\n\t\"email\":\"new_user@mail.com\",\n\t\"enabled\": true,\n\t\"phone\": \"04534234234\",\n\t\"address\":\"test 123456 address\",\n\t\"avatar\":null,\n\t\"profileId\":\"2\"\n}"
+								},
+								"url": {
+									"raw": "http://localhost:8181/platform-api/users/3",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8181",
+									"path": [
+										"platform-api",
+										"users",
+										"3"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"_postman_id": "a4e884e9-9f79-4dc8-a2b3-dab231dfd862",
+							"name": "delete",
+							"request": {
+								"method": "DELETE",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJjcmVhdGVkIjoxNTM2NDgxOTYxNjgwLCJhdXR0eXBlIjoiU0lNUExFIiwibmFtZSI6InJvb3QgIiwiYWRtaW4iOnRydWUsImlkIjoxLCJleHAiOjYyMDE2NDgxOTYxLCJlbWFpbCI6InJvb3RAaXRsZWFkZXIubWEiLCJ1c2VybmFtZSI6InJvb3QifQ.Hf1d5POOwIOq4_D-Rbd5Jv1U-XgkM0Mgjz5GqDhTy8UYC093EL7xt-BRF6P3cTeExAJbMF91AT2EHYsjS8h04Q"
+									}
+								],
+								"body": {},
+								"url": {
+									"raw": "http://localhost:8181/platform-api/users/3",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8181",
+									"path": [
+										"platform-api",
+										"users",
+										"3"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"_postman_id": "16d00943-018e-4a48-97e6-091a83a97ff6",
+							"name": "disable-account",
+							"request": {
+								"method": "PUT",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJjcmVhdGVkIjoxNTM2NDgxOTYxNjgwLCJhdXR0eXBlIjoiU0lNUExFIiwibmFtZSI6InJvb3QgIiwiYWRtaW4iOnRydWUsImlkIjoxLCJleHAiOjYyMDE2NDgxOTYxLCJlbWFpbCI6InJvb3RAaXRsZWFkZXIubWEiLCJ1c2VybmFtZSI6InJvb3QifQ.Hf1d5POOwIOq4_D-Rbd5Jv1U-XgkM0Mgjz5GqDhTy8UYC093EL7xt-BRF6P3cTeExAJbMF91AT2EHYsjS8h04Q"
+									}
+								],
+								"body": {},
+								"url": {
+									"raw": "http://localhost:8181/platform-api/users/3/disable",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8181",
+									"path": [
+										"platform-api",
+										"users",
+										"3",
+										"disable"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"_postman_id": "98438fd4-5c79-40e9-ae1a-7a10cb61829d",
+							"name": "enable-account",
+							"request": {
+								"method": "PUT",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJjcmVhdGVkIjoxNTM2NDgxOTYxNjgwLCJhdXR0eXBlIjoiU0lNUExFIiwibmFtZSI6InJvb3QgIiwiYWRtaW4iOnRydWUsImlkIjoxLCJleHAiOjYyMDE2NDgxOTYxLCJlbWFpbCI6InJvb3RAaXRsZWFkZXIubWEiLCJ1c2VybmFtZSI6InJvb3QifQ.Hf1d5POOwIOq4_D-Rbd5Jv1U-XgkM0Mgjz5GqDhTy8UYC093EL7xt-BRF6P3cTeExAJbMF91AT2EHYsjS8h04Q"
+									}
+								],
+								"body": {},
+								"url": {
+									"raw": "http://localhost:8181/platform-api/users/3/enable",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8181",
+									"path": [
+										"platform-api",
+										"users",
+										"3",
+										"enable"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"_postman_id": "2ca05479-5ceb-4983-92fa-cfa898270f1b",
+							"name": "reset-password",
+							"request": {
+								"method": "PUT",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJjcmVhdGVkIjoxNTM2NDgxOTYxNjgwLCJhdXR0eXBlIjoiU0lNUExFIiwibmFtZSI6InJvb3QgIiwiYWRtaW4iOnRydWUsImlkIjoxLCJleHAiOjYyMDE2NDgxOTYxLCJlbWFpbCI6InJvb3RAaXRsZWFkZXIubWEiLCJ1c2VybmFtZSI6InJvb3QifQ.Hf1d5POOwIOq4_D-Rbd5Jv1U-XgkM0Mgjz5GqDhTy8UYC093EL7xt-BRF6P3cTeExAJbMF91AT2EHYsjS8h04Q"
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{  \n   \"password\":\"azerty\"\n}"
+								},
+								"url": {
+									"raw": "http://localhost:8181/platform-api/users/3/reset-password",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8181",
+									"path": [
+										"platform-api",
+										"users",
+										"3",
+										"reset-password"
+									]
+								}
+							},
+							"response": []
+						}
+					],
+					"_postman_isSubFolder": true
+				}
+			]
+		},
+		{
+			"_postman_id": "9abc3289-055b-47bb-abb6-89754b96ea4e",
+			"name": "examples",
+			"item": [
+				{
+					"_postman_id": "7b654857-c268-4115-9bc3-a330c36186da",
+					"name": "get-all-examples",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJjcmVhdGVkIjoxNTM2NDQ0NDQyMDc1LCJhdXR0eXBlIjoiU0lNUExFIiwibmFtZSI6InJvb3QgIiwiYWRtaW4iOnRydWUsImlkIjoxLCJleHAiOjYyMDE2NDQ0NDQyLCJlbWFpbCI6InJvb3RAaXRsZWFkZXIubWEiLCJ1c2VybmFtZSI6InJvb3QifQ.VKSCV6lby__tCZIH0Q7gAuGVTUhlKpQORDD6CaYMgY6vyfOkCJ7PNILxFCUNZIot_wOhZH1g8K2EDqjFWyd4og"
+							}
+						],
+						"body": {},
+						"url": {
+							"raw": "http://localhost:8181/platform-api/examples",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8181",
+							"path": [
+								"platform-api",
+								"examples"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"_postman_id": "d915f96b-59f9-4639-bbdb-13c33e11833f",
+					"name": "get-paged-examples",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJjcmVhdGVkIjoxNTM2NDgxOTYxNjgwLCJhdXR0eXBlIjoiU0lNUExFIiwibmFtZSI6InJvb3QgIiwiYWRtaW4iOnRydWUsImlkIjoxLCJleHAiOjYyMDE2NDgxOTYxLCJlbWFpbCI6InJvb3RAaXRsZWFkZXIubWEiLCJ1c2VybmFtZSI6InJvb3QifQ.Hf1d5POOwIOq4_D-Rbd5Jv1U-XgkM0Mgjz5GqDhTy8UYC093EL7xt-BRF6P3cTeExAJbMF91AT2EHYsjS8h04Q"
+							}
+						],
+						"body": {},
+						"url": {
+							"raw": "http://localhost:8181/proacc-api/examples/paged-list?page=0&size=5",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8181",
+							"path": [
+								"proacc-api",
+								"examples",
+								"paged-list"
+							],
+							"query": [
+								{
+									"key": "page",
+									"value": "0"
+								},
+								{
+									"key": "size",
+									"value": "5"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"_postman_id": "c083fe4f-1694-4706-949a-7fe158f0f5e5",
+					"name": "create-new-example",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJjcmVhdGVkIjoxNTM2NDQ0NDQyMDc1LCJhdXR0eXBlIjoiU0lNUExFIiwibmFtZSI6InJvb3QgIiwiYWRtaW4iOnRydWUsImlkIjoxLCJleHAiOjYyMDE2NDQ0NDQyLCJlbWFpbCI6InJvb3RAaXRsZWFkZXIubWEiLCJ1c2VybmFtZSI6InJvb3QifQ.VKSCV6lby__tCZIH0Q7gAuGVTUhlKpQORDD6CaYMgY6vyfOkCJ7PNILxFCUNZIot_wOhZH1g8K2EDqjFWyd4og"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"id\": null,\n\t\"title\": \"Test\",\n\t\"description\": \"description\"\n}"
+						},
+						"url": {
+							"raw": "http://localhost:8181/platform-api/examples",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8181",
+							"path": [
+								"platform-api",
+								"examples"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"_postman_id": "69361258-c871-4f46-a390-d1d6a94f0db0",
+					"name": "edit-new-example",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJjcmVhdGVkIjoxNTM2NDQ0NDQyMDc1LCJhdXR0eXBlIjoiU0lNUExFIiwibmFtZSI6InJvb3QgIiwiYWRtaW4iOnRydWUsImlkIjoxLCJleHAiOjYyMDE2NDQ0NDQyLCJlbWFpbCI6InJvb3RAaXRsZWFkZXIubWEiLCJ1c2VybmFtZSI6InJvb3QifQ.VKSCV6lby__tCZIH0Q7gAuGVTUhlKpQORDD6CaYMgY6vyfOkCJ7PNILxFCUNZIot_wOhZH1g8K2EDqjFWyd4og"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"id\": 1,\n\t\"title\": \"Test 20\",\n\t\"description\": \"description 20\"\n}"
+						},
+						"url": {
+							"raw": "http://localhost:8181/platform-api/examples/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8181",
+							"path": [
+								"platform-api",
+								"examples",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"_postman_id": "bcce5e71-17fe-4804-9828-4de22ec8cc23",
+					"name": "get-example-by-id",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJjcmVhdGVkIjoxNTM2NDQ0NDQyMDc1LCJhdXR0eXBlIjoiU0lNUExFIiwibmFtZSI6InJvb3QgIiwiYWRtaW4iOnRydWUsImlkIjoxLCJleHAiOjYyMDE2NDQ0NDQyLCJlbWFpbCI6InJvb3RAaXRsZWFkZXIubWEiLCJ1c2VybmFtZSI6InJvb3QifQ.VKSCV6lby__tCZIH0Q7gAuGVTUhlKpQORDD6CaYMgY6vyfOkCJ7PNILxFCUNZIot_wOhZH1g8K2EDqjFWyd4og"
+							}
+						],
+						"body": {},
+						"url": {
+							"raw": "http://localhost:8181/platform-api/examples/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8181",
+							"path": [
+								"platform-api",
+								"examples",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"_postman_id": "25a3adfb-d2aa-4abf-b051-3a9425e66775",
+					"name": "delete-example-by-id",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJjcmVhdGVkIjoxNTM2NDQ0NDQyMDc1LCJhdXR0eXBlIjoiU0lNUExFIiwibmFtZSI6InJvb3QgIiwiYWRtaW4iOnRydWUsImlkIjoxLCJleHAiOjYyMDE2NDQ0NDQyLCJlbWFpbCI6InJvb3RAaXRsZWFkZXIubWEiLCJ1c2VybmFtZSI6InJvb3QifQ.VKSCV6lby__tCZIH0Q7gAuGVTUhlKpQORDD6CaYMgY6vyfOkCJ7PNILxFCUNZIot_wOhZH1g8K2EDqjFWyd4og"
+							}
+						],
+						"body": {},
+						"url": {
+							"raw": "http://localhost:8181/platform-api/examples/2",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8181",
+							"path": [
+								"platform-api",
+								"examples",
+								"2"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"_postman_id": "fb5c5fe3-905b-40e3-8d0d-d5c0003addd1",
+			"name": "api",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"url": {
+					"raw": "http://localhost:8181/platform-api",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8181",
+					"path": [
+						"platform-api"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
